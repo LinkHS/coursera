@@ -15,7 +15,7 @@ J = 0;
 
 prod = X * theta;
 diff_sum = prod - y;
-J = sum(diff_sum.*diff_sum)/2/m;
+J = sum(diff_sum.*diff_sum)/2/m
 
 % =========================================================================
 
