@@ -13,7 +13,9 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-
+prod = X * theta;
+diff_sum = prod - y;
+J = sum(diff_sum.*diff_sum)/2/m;
 
 
 
