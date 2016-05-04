@@ -20,12 +20,14 @@ grad = zeros(size(theta));
 % Note: grad should have the same dimensions as theta
 %
 
+% sum along dimension 2 (add each column together)
+z = sum(X*theta, 2);
 
+hx = sigmoid(z);
+diff = -y.*log(hx) - (1-y).*log(1-hx);
+J = sum(diff)/m;
 
-
-
-
-
+grad = sum((hx - y).*X)/m;
 
 % =============================================================
 
